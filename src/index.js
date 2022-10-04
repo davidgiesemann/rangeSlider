@@ -111,7 +111,7 @@ class RangeSlider {
         if(this.#settings.progress) this.#progress.style.right = `calc( ${percentage}% - ${quotient} * ${handleDiameter}px )`
     }
 
-    static #getHTMLElement(tagName,attributes){
+    #getHTMLElement(tagName,attributes){
         const element = document.createElement(tagName)
 
         for (const attribute in attributes){
