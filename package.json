@@ -1,7 +1,7 @@
 {
-  "name": "rangeslider",
+  "name": "js-rangeslider",
   "version": "1.0.0",
-  "description": "A pure vanilla javascript range Slider handling dual inputs",
+  "description": "A vanilla js range Slider utility handling dual inputs",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js && npm run build:css",
@@ -21,7 +21,8 @@
     "range",
     "input",
     "slider",
-    "dual"
+    "dual",
+    "front-end"
   ],
   "author": "David Giesemann",
   "license": "ISC",
