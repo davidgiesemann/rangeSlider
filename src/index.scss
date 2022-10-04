@@ -1,0 +1,84 @@
+/**
+ * (c) David Giesemann
+ * info@david-giesemann.de
+ */
+
+$barBackground: #cccccc !default;
+$barHeight: 3px !default;
+$barBorderRadius: $barHeight !default;
+
+$handleBackground: #ffffff !default;
+$handleDiameter: 20px !default;
+$handleBorderRadius: $handleDiameter !default;
+$handleBorderWidth: 3px !default;
+$handleBorder: $handleBorderWidth solid #ff8014 !default;
+
+$progressBackground: #ff8014 !default;
+$progressBorderRadius: $handleDiameter !default;
+$progressHeight: $handleDiameter !default;
+
+.rangeSlider {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    [type="range"] {
+        appearance: none;
+        background-color: transparent;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            cursor: pointer;
+            box-shadow: none;
+            outline: none;
+            width: $handleDiameter;
+            height: $handleDiameter;
+            background: $handleBackground;
+            border-radius: $handleBorderRadius;
+            border: $handleBorder;
+            pointer-events: auto;
+            opacity: 1;
+        }
+    }
+
+    .slider {
+        position: relative;
+        height: $handleDiameter;
+
+        &::before,
+        .progress {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            height: $barHeight;
+            border-radius: $barBorderRadius;
+            background: $barBackground;
+        }
+
+        .progress {
+            height: $progressHeight;
+            border-radius: $progressBorderRadius;
+            background: $progressBackground;
+        }
+    }
+
+    .output {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

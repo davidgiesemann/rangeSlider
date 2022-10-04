@@ -1,0 +1,39 @@
+{
+  "name": "rangeslider",
+  "version": "1.0.0",
+  "description": "A pure vanilla javascript range Slider handling dual inputs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "npm run compile-js && npm run minify-js",
+    "build:css": "npm run compile-scss && npm run minify-css",
+    "compile-js": "babel ./src/index.js --out-file=./dist/rangeslider.js --presets=@babel/preset-env",
+    "compile-js-watch": "babel ./src/index.js --out-file=./dist/rangeslider.js --presets=@babel/preset-env --watch",
+    "compile-scss": "sass --no-source-map ./src/index.scss ./dist/rangeslider.css",
+    "minify-js": "minify ./dist/rangeslider.js --outFile=./dist/rangeslider.min.js",
+    "minify-css": "sass --no-source-map --style=compressed ./src/index.scss ./dist/rangeslider.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgiesemann/rangeSlider.git"
+  },
+  "keywords": [
+    "range",
+    "input",
+    "slider",
+    "dual"
+  ],
+  "author": "David Giesemann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidgiesemann/rangeSlider/issues"
+  },
+  "homepage": "https://github.com/davidgiesemann/rangeSlider#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "babel-minify": "^0.5.2",
+    "sass": "^1.55.0"
+  }
+}
