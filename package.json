@@ -12,10 +12,13 @@
   },
   "keywords": [
     "range",
-    "input",
     "slider",
+    "input",
     "dual",
-    "front-end"
+    "front-end",
+    "pricerange",
+    "min",
+    "max"
   ],
   "browserslist": [
     ">.25%, not dead"

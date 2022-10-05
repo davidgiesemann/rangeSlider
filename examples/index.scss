@@ -24,6 +24,14 @@ body{
     text-shadow: 0 .25em 1em darken($primary,40%);
 }
 
+button{
+    margin: 2em auto;
+    padding: .5em;
+    background: lighten($primary,50%);
+    border-radius: .5em;
+    cursor: pointer;
+}
+
 h1{
     font-size: 36px;
     text-align: center;
@@ -39,6 +47,8 @@ main{
     margin: 0 auto;
     width: 100%;
     max-width: 960px;
+    display: flex;
+    flex-direction: column;
 }
 
 pre{

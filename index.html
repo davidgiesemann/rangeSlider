@@ -43,6 +43,24 @@ document.querySelectorAll(".step-lg").forEach(el => {
     })
 })
         </pre>
+
+        <h2>Without output, using button to alert the min and max values</h2>
+        <div class="rangeSlider no-output" data-min="50" data-max="150" data-step="3" data-vmin="90" data-vmax="120"></div>
+        <pre>
+&lt;div class="rangeSlider no-output" data-min="50" data-max="150" data-step="3" data-vmin="90" data-vmax="120"&gt;&lt;/div&gt;
+
+document.querySelectorAll(".no-output").forEach(el => {
+    const slider = new RangeSlider(el, {
+        output: false
+    })
+
+    const button = document.createElement("button")
+    button.textContent = "Alert slider values"
+    button.onclick = () => alert(`Your values are: ${slider.min} and ${slider.max}`)
+
+    el.after(button)
+})
+        </pre>
     </main>
 </body>
 </html>
