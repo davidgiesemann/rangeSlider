@@ -1,17 +1,17 @@
 {
   "name": "js-rangeslider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A vanilla js range Slider utility handling dual inputs",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js && npm run build:css",
     "build:js": "npm run compile-js && npm run minify-js",
     "build:css": "npm run compile-scss && npm run minify-css",
-    "compile-js": "babel ./src/index.js --out-file=./dist/rangeslider.js --presets=@babel/preset-env",
-    "compile-js-watch": "babel ./src/index.js --out-file=./dist/rangeslider.js --presets=@babel/preset-env --watch",
-    "compile-scss": "sass --no-source-map ./src/index.scss ./dist/rangeslider.css",
-    "minify-js": "minify ./dist/rangeslider.js --outFile=./dist/rangeslider.min.js",
-    "minify-css": "sass --no-source-map --style=compressed ./src/index.scss ./dist/rangeslider.min.css"
+    "compile-js": "babel src/js-rangeslider.js --out-file=./dist/js-rangeslider.js --presets=@babel/preset-env",
+    "compile-js-watch": "babel src/js-rangeslider.js --out-file=./dist/js-rangeslider.js --presets=@babel/preset-env --watch",
+    "compile-scss": "sass --no-source-map src/js-rangeslider.scss ./dist/js-rangeslider.css",
+    "minify-js": "minify ./dist/js-rangeslider.js --outFile=./dist/js-rangeslider.min.js",
+    "minify-css": "sass --no-source-map --style=compressed src/js-rangeslider.scss ./dist/js-rangeslider.min.css"
   },
   "repository": {
     "type": "git",

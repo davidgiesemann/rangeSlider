@@ -19,12 +19,10 @@ class RangeSlider {
             max: this.#element.dataset.max || 100,
             minInputName: "min",
             maxInputName: "max",
-            minInputValue: this.#element.dataset.vmin,
-            maxInputValue: this.#element.dataset.vmax,
+            minInputValue: this.#element.dataset.vmin || 0,
+            maxInputValue: this.#element.dataset.vmax || 100,
             step: this.#element.dataset.step || 1,
-            outputFormatter: output => output,
-            outputPrefix: "",
-            outputSuffix: "&nbsp;&euro;",
+            outputFormatter: output => `${output} &euro;`,
             progress: true,
             output: true,
         },options)
@@ -90,7 +88,7 @@ class RangeSlider {
     set min(v){
         this.#minInput.value = v <= this.max ? v : this.max
 
-        if(this.#settings.output) this.#minOutput.innerHTML = `${this.#settings.outputPrefix}${this.#settings.outputFormatter(this.min)}${this.#settings.outputSuffix}`
+        if(this.#settings.output) this.#minOutput.innerHTML = `${this.#settings.outputFormatter(this.min)}`
 
         const quotient = (this.min - this.#settings.min) / (this.#settings.max - this.#settings.min)
         const percentage = quotient * 100
@@ -102,7 +100,7 @@ class RangeSlider {
     set max(v){
         this.#maxInput.value = v >= this.min ? v : this.min
 
-        if(this.#settings.output) this.#maxOutput.innerHTML = `${this.#settings.outputPrefix}${this.#settings.outputFormatter(this.max)}${this.#settings.outputSuffix}`
+        if(this.#settings.output) this.#maxOutput.innerHTML = `${this.#settings.outputFormatter(this.max)}`
 
         const quotient = 1 - ((this.max - this.#settings.min) / (this.#settings.max - this.#settings.min))
         const percentage = quotient * 100
