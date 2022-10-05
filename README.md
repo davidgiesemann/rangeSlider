@@ -6,15 +6,16 @@
 
 ## Usage
 
-Either use the minified scripts and styles from the dist folder:
+Add HTML-Elements of class "rangeSlider" to your markup first:
 
-    <link rel="stylesheet" href="dist/js-rangeslider.min.css" />
-    <script src="dist/js-rangeslider.min.js"></script>
+    <div class="rangeSlider" data-min="0" data-max="100" data-step="1" data-vmin="20" data-vmax="80"></div>
 
-or use the source files in your own workflow/bundle-tool:
+Import rangeSlider as needed:
 
-    import styles from "js-rangeslider/src/js-rangeslider"
+    import Styles from "js-rangeslider/src/js-rangeslider"
     import RangeSlider from "js-rangeslider/src/js-rangeslider"
+
+    new RangeSlider(document.querySelector(".rangeSlider"))
 
 If you want to override the default styling, use scss to override the default values before importing:
 
@@ -24,14 +25,6 @@ If you want to override the default styling, use scss to override the default va
     $progressBackground: #c00;
 
     @import "js-rangeslider/src/js-rangeslider";
-
-Finally, add an HTML-Element with class "rangeSlider" to your markup an initialize you rangeSlider:
-
-    <div class="rangeSlider" data-min="0" data-max="100" data-step="1" data-vmin="20" data-vmax="80"></div>
-
-    <script>
-        new RangeSlider(document.querySelector(".rangeSlider"))
-    </script>
 
 ## Options
 
