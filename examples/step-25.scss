@@ -1,0 +1,24 @@
+/**
+ * (c) David Giesemann
+ * info@david-giesemann.de
+ */
+
+.step-25{
+    .slider::before{
+        background: linear-gradient(90deg, #444,transparent,#444);
+    }
+
+    .slider .progress{
+        height: 16px;
+        background: linear-gradient(90deg, #c00, transparent, #c00);
+    }
+
+    [type="range"]{
+        &::-webkit-slider-thumb {
+            border: 0;
+            background: linear-gradient(0deg, transparent,#c00,transparent),linear-gradient(90deg, #fff,#c00,#fff);
+            box-shadow: 0 0 5px #c00;
+        }
+    }
+}
+

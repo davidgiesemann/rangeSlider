@@ -3,7 +3,7 @@
  * info@david-giesemann.de
  */
 
-import styles from "../src/js-rangeslider.scss"
+import "../src/js-rangeslider.scss"
 import RangeSlider from "../src/js-rangeslider"
 
 document.querySelectorAll(".default").forEach(el => {
