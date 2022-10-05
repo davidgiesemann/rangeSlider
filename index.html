@@ -7,12 +7,42 @@
     <script defer src="./dist/js-rangeslider.js"></script>
 </head>
 <body>
-    <h1>RangeSliders</h1>
+    <main>
+        <h1>RangeSliders</h1>
 
-    <h2>Default</h2>
-    <div class="rangeSlider default" data-min="0" data-max="100" data-step="1" data-vmin="20" data-vmax="80"></div>
+        <h2>Default</h2>
+        <div class="rangeSlider default" data-min="0" data-max="100" data-step="1" data-vmin="20" data-vmax="80"></div>
+        <pre>
+&lt;div class="rangeSlider default" data-min="0" data-max="100" data-step="1" data-vmin="20" data-vmax="80"&gt;&lt;/div&gt;
 
-    <h2>With .25-Stepping</h2>
-    <div class="rangeSlider step-25" data-min="50" data-max="100" data-step=".25" data-vmin="60" data-vmax="95"></div>
+document.querySelectorAll(".default").forEach(el => {
+    new RangeSlider(el)
+})
+        </pre>
+
+        <h2>With .25-Stepping and custom output-formatter</h2>
+        <div class="rangeSlider step-25" data-min="50" data-max="100" data-step=".25" data-vmin="75" data-vmax="90"></div>
+        <pre>
+&lt;div class="rangeSlider step-25" data-min="50" data-max="100" data-step=".25" data-vmin="75" data-vmax="90"&gt;&lt;/div&gt;
+
+document.querySelectorAll(".step-25").forEach(el => {
+    new RangeSlider(el,{
+        outputFormatter: o => `${o.toFixed(2)} kg`
+    })
+})
+        </pre>
+
+        <h2>With high stepping for large values</h2>
+        <div class="rangeSlider step-lg" data-min="10000" data-max="100000" data-step="2500" data-vmin="45000" data-vmax="60000"></div>
+        <pre>
+&lt;div class="rangeSlider step-lg" data-min="10000" data-max="99000" data-step="2500" data-vmin="45000" data-vmax="60000"&gt;&lt;/div&gt;
+
+document.querySelectorAll(".step-lg").forEach(el => {
+    new RangeSlider(el,{
+        outputFormatter: o => `${o/1000} k`
+    })
+})
+        </pre>
+    </main>
 </body>
 </html>

@@ -1,0 +1,58 @@
+/**
+ * (c) David Giesemann
+ * info@david-giesemann.de
+ */
+
+$primary: #34568B;
+
+$handleBackground: radial-gradient(lighten($primary,10%),$primary);
+$handleBorder: 3px solid lighten($primary,50%);
+$barBackground: $primary;
+$progressBackground: lighten($primary,50%);
+$progressHeight: 6px;
+
+@import "../src/js-rangeslider";
+
+body{
+    padding: 5em 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-size: 100%;
+    background: linear-gradient(darken($primary, 20%), darken($primary, 30%)) fixed;
+    color: lighten($primary,55%);
+    font-family: sans-serif;
+    text-shadow: 0 .25em 1em darken($primary,40%);
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+h2{
+    margin: 5em 0 1em;
+    font-size: 18px;
+}
+
+main{
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+}
+
+pre{
+    border-radius: 2em;
+    padding: 2em;
+    margin: 1em 0;
+    background: darken($primary,30%);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255,255,255,.1);
+    box-shadow: inset 0 0 2em darken($primary, 30%);
+}
+
+.output{
+    margin: 1em 0;
+    font-size: small;
+}
