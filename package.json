@@ -1,6 +1,6 @@
 {
   "name": "js-rangeslider",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A vanilla js range Slider utility handling dual inputs",
   "scripts": {
     "build": "webpack --config webpack.config.js",
